@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For LJ</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 600px;
+    }
+
+    .signature {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey LJ</h1>
+  <p id="rizz"></p>
+  <div class="signature">– Aaron</div>
+
+  <script>
+    const text = "I never needed a perfect moment. Just a chance. This is my last one. You mattered — more than I ever let on.";
+    const el = document.getElementById("rizz");
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        el.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 60);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
