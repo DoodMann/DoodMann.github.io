@@ -6,35 +6,63 @@
   <title>For LJ</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
-      background: #111;
       color: #fff;
+      background-color: #111;
+      overflow-x: hidden;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 30px 20px;
+      align-items: center;
       text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./assets/lj.jpg') no-repeat center center/cover;
+      filter: blur(8px) brightness(0.5);
+      z-index: -1;
+    }
+
+    .content {
+      max-width: 800px;
+      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     .photo {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       background-image: url('./assets/lj.jpg');
       background-size: cover;
       background-position: center;
-      margin-bottom: 30px;
+      margin: 0 auto 1.5rem;
       border: 3px solid #fff;
     }
 
     .message {
-      max-width: 700px;
-      line-height: 1.8;
       font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     strong {
@@ -46,7 +74,7 @@
     }
 
     .playlist {
-      margin-top: 30px;
+      margin-top: 2rem;
     }
 
     a {
@@ -60,33 +88,49 @@
     }
 
     .signature {
-      margin-top: 40px;
-      color: #aaa;
+      margin-top: 2rem;
+      color: #ccc;
       font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .message {
+        font-size: 1rem;
+      }
+
+      .photo {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="photo"></div>
+  <div class="content">
+    <div class="photo"></div>
+    <div class="message">
+      <p>Hey. This would probably be the last thing I'd do for you since you're moving na sa Manila and we'll both be busy.</p>
 
-  <div class="message">
-    <p>Hey. This would probably be the last thing I'd do for you since you're moving na sa Manila and we'll both be busy.</p>
+      <p>You were amazing, LJ. Those calls na we did, the time na we spent sa 39ers that day — ewan ko for you if you'd consider that as a date, but I kind of did. And you might say na baka I say this to others too (like Lei), <strong>no</strong>. You're the first na I ever experienced that kind of thing. <strong>You're special for me, LJ.</strong></p>
 
-    <p>You were amazing, LJ. Those calls na we did, the time na we spent sa 39ers that day — ewan ko for you if you'd consider that as a date, but I kind of did. And you might say na baka I say this to others too (like Lei), <strong>no</strong>. You're the first na I ever experienced that kind of thing. <strong>You're special for me, LJ.</strong></p>
+      <p>And while Sean's more provocative and louder way of showing his love for you might win, just know that <strong>I love you genuinely</strong>, and <em>is</em> willing to fight for you and your family.</p>
 
-    <p>And while Sean's more provocative and louder way of showing his love for you might win, just know that <strong>I love you genuinely</strong>, and <em>is</em> willing to fight for you and your family.</p>
+      <p>I hope you have fun in Manila while staying safe, we both know na it's not safe there. And kahit wag mo na basahin lahat, ito lang. Sana <strong>magpahinga pag sinasabi ng katawan na magpahinga</strong>, okay? Seryoso 'to.</p>
 
-    <p>I hope you have fun in Manila while staying safe, we both know na it's not safe there. And kahit wag mo na basahin lahat, ito lang. Sana <strong>magpahinga pag sinasabi ng katawan na magpahinga</strong>, okay? Seryoso 'to.</p>
+      <p><em>I love you in the purest, most genuine form, without hesitation, without expectation—just love, as it was always meant to be.</em></p>
+    </div>
 
-    <p><em>I love you in the purest, most genuine form, without hesitation, without expectation—just love, as it was always meant to be.</em></p>
+    <div class="playlist">
+      🎵 <a href="https://open.spotify.com/playlist/5YqpL89xnOsdsEYnhWDya4?si=348ba99e775747d0" target="_blank">Listen to the playlist I made for you</a>
+    </div>
+
+    <div class="signature">
+      – Aaron
+    </div>
   </div>
 
-  <div class="playlist">
-    🎵 <a href="https://open.spotify.com/playlist/0RY7odxiQgIx02fMxUwu8V?si=8c144b8ca65d4fcf" target="_blank">Listen to the playlist I made for you</a>
-  </div>
-
-  <div class="signature">
-    – Aaron
-  </div>
+  <audio autoplay loop hidden>
+    <source src="./assets/lofi.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
