@@ -4,57 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For LJ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      font-family: 'Poppins', sans-serif;
+      background: #111;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      flex-direction: column;
+      min-height: 100vh;
+      padding: 30px 20px;
       text-align: center;
-      padding: 20px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    .photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-image: url('./assets/lj.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 30px;
+      border: 3px solid #fff;
     }
 
-    p {
-      font-size: 1.3rem;
-      max-width: 600px;
+    .message {
+      max-width: 700px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .playlist {
+      margin-top: 30px;
+    }
+
+    a {
+      color: #9be7ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .signature {
-      margin-top: 2rem;
+      margin-top: 40px;
+      color: #aaa;
       font-style: italic;
-      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Hey LJ</h1>
-  <p id="rizz"></p>
-  <div class="signature">– Aaron</div>
+  <div class="photo"></div>
 
-  <script>
-    const text = "I never needed a perfect moment. Just a chance. This is my last one. You mattered — more than I ever let on.";
-    const el = document.getElementById("rizz");
-    let i = 0;
+  <div class="message">
+    <p>Hey. This would probably be the last thing I'd do for you since you're moving na sa Manila and we'll both be busy.</p>
 
-    function type() {
-      if (i < text.length) {
-        el.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 60);
-      }
-    }
+    <p>You were amazing, LJ. Those calls na we did, the time na we spent sa 39ers that day — ewan ko for you if you'd consider that as a date, but I kind of did. And you might say na baka I say this to others too (like Lei), <strong>no</strong>. You're the first na I ever experienced that kind of thing. <strong>You're special for me, LJ.</strong></p>
 
-    type();
-  </script>
+    <p>And while Sean's more provocative and louder way of showing his love for you might win, just know that <strong>I love you genuinely</strong>, and <em>is</em> willing to fight for you and your family.</p>
+
+    <p>I hope you have fun in Manila while staying safe, we both know na it's not safe there. And kahit wag mo na basahin lahat, ito lang. Sana <strong>magpahinga pag sinasabi ng katawan na magpahinga</strong>, okay? Seryoso 'to.</p>
+
+    <p>In the most genuine way possible, LJ.</p>
+
+    <p><strong>I love you in the purest, most genuine form, without hesitation, without expectation—just love, as it was always meant to be.</strong></p>
+  </div>
+
+  <div class="playlist">
+    🎵 <a href="https://open.spotify.com/playlist/5YqpL89xnOsdsEYnhWDya4?si=348ba99e775747d0" target="_blank">Listen to the playlist I made for you</a>
+  </div>
+
+  <div class="signature">
+    – Aaron
+  </div>
 </body>
 </html>
